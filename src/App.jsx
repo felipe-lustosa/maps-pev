@@ -5,6 +5,10 @@ import { getStateEmissions, getTotalEmissions } from "./services/api";
 import mapStyle from "./styles/mapStyle";
 import ClipLoader from "react-spinners/ClipLoader";
 import { PieChart } from "./components/PieChart";
+import { IoMdMenu } from 'react-icons/io'
+import { motion } from 'framer-motion'
+import Menu from "./components/Menu";
+import Calculator from "./components/menuModals/Calculator";
 
 const initialMapCenter = { lat: -12.681795, lng: -51.034334 }
 
@@ -28,6 +32,7 @@ function App() {
   const [stateEmissions, setStateEmissions] = useState(null)
   const [isLoadingTotal, setIsLoadingTotal] = useState(false)
   const [isLoadingState, setIsLoadingState] = useState(false)
+  const [openMenu, setOpenMenu] = useState(false)
 
   useEffect(() => {
     setIsLoadingTotal(true)
@@ -80,8 +85,17 @@ function App() {
 
   return (
     <div className="w-screen h-screen relative">
+      <div className="z-30">
+        <Calculator />
+      </div>
       <div className="absolute top-4 left-4 z-10 space-y-6">
-        <div className="flex flex-col items-center bg-white shadow">
+        <div className="flex gap-4">
+          <div className="bg-white p-3 w-fit cursor-pointer rounded shadow z-10" onClick={() => setOpenMenu(!openMenu)} >
+            <IoMdMenu size={24} />
+          </div>
+          {openMenu && <Menu />}
+        </div>
+        <div className="flex flex-col items-center bg-white shadow w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
             <h2 className="font-semibold text-white">EMISSÕES TOTAIS</h2>
           </div>
@@ -89,7 +103,7 @@ function App() {
             {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold">{totalEmissions?.country + " Toneladas"}</h3>}
           </div>
         </div>
-        <div className="flex flex-col items-center bg-white shadow">
+        <div className="flex flex-col items-center bg-white shadow w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
             <h2 className="font-semibold text-white">ESTADO COM MAIS EMISSÕES</h2>
           </div>
@@ -97,7 +111,7 @@ function App() {
             {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold">{totalEmissions?.state + " Toneladas"}</h3>}
           </div>
         </div>
-        <div className="flex flex-col items-center bg-white shadow">
+        <div className="flex flex-col items-center bg-white shadow w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
             <h2 className="font-semibold text-white">ESCOLHER ANO DA EMISSÃO</h2>
           </div>

@@ -8,7 +8,9 @@ import { PieChart } from "./components/PieChart";
 import { IoMdMenu } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import Menu from "./components/Menu";
-import Calculator from "./components/menuModals/Calculator";
+import ModalCalculator from "./components/menuModals/ModalCalculator";
+import ModalTable from "./components/menuModals/ModalTable";
+import ModalAbout from "./components/menuModals/ModalAbout";
 
 const initialMapCenter = { lat: -12.681795, lng: -51.034334 }
 
@@ -33,6 +35,7 @@ function App() {
   const [isLoadingTotal, setIsLoadingTotal] = useState(false)
   const [isLoadingState, setIsLoadingState] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
+  const [openModal, setOpenModal] = useState('')
 
   useEffect(() => {
     setIsLoadingTotal(true)
@@ -85,15 +88,17 @@ function App() {
 
   return (
     <div className="w-screen h-screen relative">
-      <div className="z-30">
-        <Calculator />
+      <div className="z-40">
+        <ModalCalculator open={openModal == 'Calculadora'} handleClose={() => setOpenModal('')} />
+        <ModalTable open={openModal == 'Tabela'} handleClose={() => setOpenModal('')} />
+        <ModalAbout open={openModal == 'Sobre'} handleClose={() => setOpenModal('')} />
       </div>
       <div className="absolute top-4 left-4 z-10 space-y-6">
         <div className="flex gap-4">
           <div className="bg-white p-3 w-fit cursor-pointer rounded shadow z-10" onClick={() => setOpenMenu(!openMenu)} >
             <IoMdMenu size={24} />
           </div>
-          {openMenu && <Menu />}
+          {openMenu && <Menu handleMenuClick={setOpenModal} />}
         </div>
         <div className="flex flex-col items-center bg-white shadow w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">

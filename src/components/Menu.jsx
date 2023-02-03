@@ -2,7 +2,8 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Calculator from './menuModals/ModalCalculator'
 
-const menuTabs = ['Calculadora', 'Tabela', 'Sobre']
+const menuTabs = ['Sobre']
+// const menuTabs = ['Calculadora', 'Tabela', 'Sobre']
 
 const Menu = ({ handleMenuClick }) => {
   return (

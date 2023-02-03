@@ -18,6 +18,7 @@ const ModalTable = ({ open, handleClose }) => {
           <div className='border-b border-gray-500'>
             <h3 className='text-3xl font-semibold tracking-wide'>Tabela de CO2</h3>
           </div>
+
         </div>
       </div>
     </Modal>

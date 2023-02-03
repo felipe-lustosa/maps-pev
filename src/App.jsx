@@ -90,7 +90,7 @@ function App() {
     <div className="w-screen h-screen relative">
       <div className="z-40">
         <ModalCalculator open={openModal == 'Calculadora'} handleClose={() => setOpenModal('')} />
-        <ModalTable open={openModal == 'Tabela'} handleClose={() => setOpenModal('')} />
+        <ModalTable stateEmissions={stateEmissions} totalEmissions={totalEmissions} open={openModal == 'Tabela'} handleClose={() => setOpenModal('')} />
         <ModalAbout open={openModal == 'Sobre'} handleClose={() => setOpenModal('')} />
       </div>
       <div className="absolute top-4 left-4 z-10 space-y-6">
@@ -102,7 +102,7 @@ function App() {
         </div>
         <div className="flex flex-col items-center bg-white shadow w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
-            <h2 className="font-semibold text-white">EMISSÕES TOTAIS</h2>
+            <h2 className="font-semibold text-white">EMISSÕES TOTAIS DE CO2</h2>
           </div>
           <div className="py-2">
             {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold">{totalEmissions?.country + " Toneladas"}</h3>}

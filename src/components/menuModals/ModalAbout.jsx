@@ -1,7 +1,7 @@
 import { Modal } from '@mui/material';
 import React from 'react'
 import { AiOutlineClose } from 'react-icons/ai';
-import { pageData } from '../../data/pageData';
+import { pageData } from '../../../public/pageData';
 
 // const inputStyle = 'border border-gray-400 rounded shadow px-2 py-1 focus:outline-none text-lg'
 

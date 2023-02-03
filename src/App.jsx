@@ -100,28 +100,28 @@ function App() {
           </div>
           {openMenu && <Menu handleMenuClick={setOpenModal} />}
         </div>
-        <div className="flex flex-col items-center bg-white shadow w-64">
+        <div className="flex flex-col items-center bg-white shadow w-32 md:w-48 lg:w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
             <h2 className="font-semibold text-white">EMISSÕES TOTAIS DE CO2</h2>
           </div>
           <div className="py-2">
-            {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold">{totalEmissions?.country + " Toneladas"}</h3>}
+            {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold text-center">{totalEmissions?.country + " Toneladas"}</h3>}
           </div>
         </div>
-        <div className="flex flex-col items-center bg-white shadow w-64">
+        <div className="flex flex-col items-center bg-white shadow w-32 md:w-48 lg:w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
-            <h2 className="font-semibold text-white">ESTADO COM MAIS EMISSÕES</h2>
+            <h2 className="font-semibold text-white md:sm">ESTADO COM MAIS EMISSÕES</h2>
           </div>
           <div className="py-2">
-            {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold">{totalEmissions?.state + " Toneladas"}</h3>}
+            {isLoadingTotal ? <ClipLoader loading={isLoadingTotal} size={16} /> : <h3 className="font-semibold text-center">{totalEmissions?.state + " Toneladas"}</h3>}
           </div>
         </div>
-        <div className="flex flex-col items-center bg-white shadow w-64">
+        <div className="flex flex-col items-center bg-white shadow w-32 md:w-48 lg:w-64">
           <div className="w-full bg-gray-700 px-4 py-2 text-center">
             <h2 className="font-semibold text-white">ESCOLHER ANO DA EMISSÃO</h2>
           </div>
           <div className="py-2">
-            <select className="font-semibold" type="select" value={selectedYear} onChange={(e) => setSelectedYear(e?.target?.value)}>
+            <select className="font-semibold text-center" type="select" value={selectedYear} onChange={(e) => setSelectedYear(e?.target?.value)}>
               {Array.from(Array(32), (e, i) => {
                 return <option key={i}>{2021 - i}</option>
               })}

@@ -8,9 +8,11 @@ import { PieChart } from "./components/PieChart";
 import { IoMdMenu } from 'react-icons/io'
 import { motion } from 'framer-motion'
 import Menu from "./components/Menu";
-import ModalCalculator from "./components/menuModals/ModalCalculator";
-import ModalTable from "./components/menuModals/ModalTable";
 import ModalAbout from "./components/menuModals/ModalAbout";
+import ModalReferences from "./components/menuModals/ModalReferences";
+import logoPev from "./assets/Logo-PEV_site.png"
+import ModalWhatIs from "./components/menuModals/ModalWhatIs";
+import ModalObjectives from "./components/menuModals/ModalObjectives";
 
 const initialMapCenter = { lat: -12.681795, lng: -51.034334 }
 
@@ -88,14 +90,30 @@ function App() {
 
   return (
     <div className="w-screen h-screen relative">
+      <div className="absolute z-10 w-full flex flex-col items-center top-4 gap-4">
+        <div className="w-fit flex px-2 py-2 bg-gray-700 text-white shadow rounded justify-center">
+          <h2 className="font-semibold text-xl">
+            Mapa de Emissões de CO2
+          </h2>
+        </div>
+        {!!!selectedPlace ? <div className="bg-white rounded px-1 py-1">
+          <h3 className="text-sm">Selecione um Estado brasileiro para ver as suas emissões</h3>
+        </div> : null}
+      </div>
       <div className="z-40">
-        <ModalCalculator open={openModal == 'Calculadora'} handleClose={() => setOpenModal('')} />
-        <ModalTable stateEmissions={stateEmissions} totalEmissions={totalEmissions} open={openModal == 'Tabela'} handleClose={() => setOpenModal('')} />
+        <ModalWhatIs open={openModal == 'O que é'} handleClose={() => setOpenModal('')} />
+        <ModalObjectives open={openModal == 'Objetivos'} handleClose={() => setOpenModal('')} />
         <ModalAbout open={openModal == 'Sobre'} handleClose={() => setOpenModal('')} />
+        <ModalReferences open={openModal == 'Fontes'} handleClose={() => setOpenModal('')} />
       </div>
       <div className="absolute top-4 left-4 z-10 space-y-6">
+        {/* <div className="w-fit flex px-2 py-2 bg-gray-700 text-white shadow rounded justify-center">
+          <h2 className="font-semibold text-xl">
+            Mapa de Emissões de CO2
+          </h2>
+        </div> */}
         <div className="flex gap-4">
-          <div className="bg-white p-3 w-fit cursor-pointer rounded shadow z-10" onClick={() => setOpenMenu(!openMenu)} >
+          <div className={"p-3 w-fit cursor-pointer rounded shadow z-10 hover:bg-gray-700 hover:text-white " + (openMenu ? "bg-gray-700 text-white" : "bg-white")} onClick={() => setOpenMenu(!openMenu)} >
             <IoMdMenu size={24} />
           </div>
           {openMenu && <Menu handleMenuClick={setOpenModal} />}
@@ -127,6 +145,11 @@ function App() {
               })}
             </select>
           </div>
+        </div>
+        <div className="cursor-pointer">
+          <a href="https://escolaverde.org/site/">
+            <img src={logoPev} className="w-64" />
+          </a>
         </div>
       </div>
       <GoogleMap options={mapOptions} onClick={handleMapClick} mapContainerStyle={containerStyle} center={initialMapCenter} zoom={mapZoom}>

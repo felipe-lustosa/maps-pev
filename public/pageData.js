@@ -26,8 +26,7 @@ export const pageData = {
     {
       title: "",
       paragraph: [
-        "Essa ferramenta foi desenvolvida como um projeto realizado na matéria de núcleo temático ofertada pelo Projeto Escola Verde.",
-        "Os conteúdos inseridos no site são atualizadas automaticamente através de fontes confiáveis, utilizando dados fornecidos pelo SEEG."
+        "O Mapa da Emissão de Carbono no Brasil é uma ferramenta desenvolvida no âmbito do Núcleo Temático de Educação Ambiental Interdisciplinar do Projeto Escola Verde. O objetivo principal é apresentar de forma sistemática os níveis anuais de emissão de CO2 por unidade da federação do Brasil. Os conteúdos inseridos no site são atualizadas automaticamente através de fontes confiáveis, utilizando dados fornecidos pelo SEEG."
       ]
     },
   ],

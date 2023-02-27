@@ -1,7 +1,7 @@
 export const pageData = {
   whatIsPageText: [
     {
-      title: "O que é o CO2:",
+      title: "",
       paragraph: ["O CO2 (Dióxido de Carbono) é um composto químico formado por dois átomos de oxigênio e um de carbono. É um produto derivado da reação de diferentes processos, tais como: a combustão do carvão e dos hidrocarbonetos, a fermentação dos líquidos e a respiração dos seres humanos e dos animais, e sua presença, em alta concentração na atmosfera, pode desequilibrar o chamado efeito estufa."]
     },
     {
@@ -15,14 +15,20 @@ export const pageData = {
   ],
   objectivesPageText: [
     {
-      title: "Objetivos do programa escola verde",
-      paragraph: ["O objetivo central do Projeto Escola Verde (PEV) é investigar estas dificuldades e promover ações no sentido de minimizar os problemas identificados, a partir da participação das comunidades escolares. Trata-se de uma Pesquisa Aplicada, do tipo Pesquisa-Ação, de caráter qualiquantitativo, que está sendo desenvolvida nas escolas de ensino fundamental, médio e superior da região do Vale do São Francisco. As atividades de pesquisa servem de embasamento e direcionamento das ações extensivas."]
+      title: "",
+      paragraph: [
+        "Apresentar de forma sistemática a distribuição da emissão do Dióxido de Carbono por estado brasileiro",
+        "Servir como fonte de pesquisa para estudos da sociedade, acadêmicos e escolares"
+      ]
     },
   ],
   aboutPageText: [
     {
-      title: "Sobre o programa escola verde",
-      paragraph: ["A Educação Ambiental (EA) pode ser desenvolvida e vivenciada de maneiras diferentes, sobretudo nas escolas, onde o ambiente é propício para a aprendizagem, o conhecimento e a mudança de comportamento. Muitas vezes, a promoção da EA nas escolas é dificultada pela pouca institucionalização da questão ambiental nos Projetos Políticos Pedagógicos – PPPs, currículos e outros documentos normativos das instituições; ou pelas limitações dos professores em desenvolver a temática ambiental a partir dos conteúdos disciplinares; ou pela carência de material didático; ou mesmo pela inadequação estrutural e ergonômica das escolas para o desenvolvimento de práticas educativas em EA, colaborando para que as instituições de ensino reproduzam um modelo de comportamento descomprometido com a sustentabilidade socioambiental."]
+      title: "",
+      paragraph: [
+        "Essa ferramenta foi desenvolvida como um projeto realizado na matéria de núcleo temático ofertada pelo Projeto Escola Verde.",
+        "Os conteúdos inseridos no site são atualizadas automaticamente através de fontes confiáveis, utilizando dados fornecidos pelo SEEG."
+      ]
     },
   ],
   referencePageText: [

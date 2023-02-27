@@ -17,7 +17,7 @@ const ModalWhatIs = ({ open, handleClose }) => {
         </div>
         <div className='flex flex-col gap-4 px-8 py-4 max-h-[calc(80vh)]'>
           <div className='border-b border-gray-500 mx-auto'>
-            <h3 className='text-3xl font-semibold tracking-wide'>O que é</h3>
+            <h3 className='text-3xl font-semibold tracking-wide'>O que é o CO2</h3>
           </div>
           <div className='flex flex-col gap-8'>
             {pageData.whatIsPageText.map((text) => {

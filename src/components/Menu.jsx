@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const menuTabs = ['O que é', 'Objetivos', 'Sobre', 'Fontes']
+const menuTabs = ['O que é o CO2', 'Objetivos', 'Sobre', 'Fontes']
 // const menuTabs = ['Calculadora', 'Tabela', 'Sobre']
 
 const Menu = ({ handleMenuClick }) => {

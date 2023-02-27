@@ -101,7 +101,7 @@ function App() {
         </div> : null}
       </div>
       <div className="z-40">
-        <ModalWhatIs open={openModal == 'O que é'} handleClose={() => setOpenModal('')} />
+        <ModalWhatIs open={openModal == 'O que é o CO2'} handleClose={() => setOpenModal('')} />
         <ModalObjectives open={openModal == 'Objetivos'} handleClose={() => setOpenModal('')} />
         <ModalAbout open={openModal == 'Sobre'} handleClose={() => setOpenModal('')} />
         <ModalReferences open={openModal == 'Fontes'} handleClose={() => setOpenModal('')} />

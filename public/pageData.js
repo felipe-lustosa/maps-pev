@@ -30,6 +30,21 @@ export const pageData = {
       ]
     },
   ],
+  catalogSheetText: [
+    {
+      title: "",
+      paragraph: [
+        "Título: Mapa de Emissões de CO2",
+        "Website: https://pemd.univasf.edu.br/ensinoverde/mapa-emissoes-co2",
+        "Autores: Felipe Lustosa Cavalcanti de Andrade e Prof. Paulo Roberto Ramos (Orientador)",
+        "PEV - Programa Escola Verde. Núcleo Temático de Educação Ambiental Interdisciplinar.",
+        "Juazeiro (BA), Fevereiro de 2023.",
+        "ISBN: 978-65-00-63620-8",
+        "Assuntos: Ferramenta para mostrar a quantidade de emissões de CO2 do Brasil e seus Estados por ano.",
+        "Telas: Mapa de emissões, o que é, objetivos, sobre e fontes",
+      ]
+    },
+  ],
   referencePageText: [
     {
       title: "",

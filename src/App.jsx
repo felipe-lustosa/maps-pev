@@ -13,6 +13,7 @@ import ModalReferences from "./components/menuModals/ModalReferences";
 import logoPev from "./assets/Logo-PEV_site.png"
 import ModalWhatIs from "./components/menuModals/ModalWhatIs";
 import ModalObjectives from "./components/menuModals/ModalObjectives";
+import ModalCatalogSheet from "./components/menuModals/ModalCatalogSheet";
 
 const initialMapCenter = { lat: -12.681795, lng: -51.034334 }
 
@@ -104,6 +105,7 @@ function App() {
         <ModalWhatIs open={openModal == 'O que é o CO2'} handleClose={() => setOpenModal('')} />
         <ModalObjectives open={openModal == 'Objetivos'} handleClose={() => setOpenModal('')} />
         <ModalAbout open={openModal == 'Sobre'} handleClose={() => setOpenModal('')} />
+        <ModalCatalogSheet open={openModal == 'Ficha Catalográfica'} handleClose={() => setOpenModal('')} />
         <ModalReferences open={openModal == 'Fontes'} handleClose={() => setOpenModal('')} />
       </div>
       <div className="absolute top-4 left-4 z-10 space-y-6">
@@ -150,6 +152,11 @@ function App() {
           <a href="https://escolaverde.org/site/">
             <img src={logoPev} className="w-64" />
           </a>
+        </div>
+        <div className="flex flex-col items-center bg-white shadow w-32 md:w-48 lg:w-64">
+          <div className="w-full bg-gray-700 px-4 py-2 text-center">
+            <h2 className="font-semibold text-white">ISBN: 978-65-00-63620-8</h2>
+          </div>
         </div>
       </div>
       <GoogleMap options={mapOptions} onClick={handleMapClick} mapContainerStyle={containerStyle} center={initialMapCenter} zoom={mapZoom}>
